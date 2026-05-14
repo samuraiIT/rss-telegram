@@ -1,4 +1,5 @@
 .env
+.secrets.env
 *.session
 *.session-journal
 processed_messages.db

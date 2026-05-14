@@ -3,27 +3,22 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# Telegram Client API (Telethon)
 TELEGRAM_API_ID = int(os.getenv("TELEGRAM_API_ID", "0"))
 TELEGRAM_API_HASH = os.getenv("TELEGRAM_API_HASH", "")
 TELEGRAM_PHONE = os.getenv("TELEGRAM_PHONE", "")
-
-# Telegram Bot API
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
-
-# Target channel for publishing
 TARGET_CHANNEL = os.getenv("TARGET_CHANNEL", "")
 
-# OpenRouter API (free Qwen model)
-OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
+OMNI_BASE_URL = os.getenv("OMNIROUTE_BASE_URL", "http://localhost:20128/v1")
+OMNI_API_KEY = os.getenv("OMNIROUTE_API_KEY", "any-string")
 
-# Check interval
+LLM_MODEL_SUMMARY = os.getenv("LLM_MODEL_SUMMARY", "ws/claude-sonnet-4-6")
+LLM_MODEL_PROFILE = os.getenv("LLM_MODEL_PROFILE", "gc/gemini-3-flash")
+LLM_MODEL_HUMANIZE = os.getenv("LLM_MODEL_HUMANIZE", "ws/claude-haiku-4-5")
+
 CHECK_INTERVAL_MINUTES = int(os.getenv("CHECK_INTERVAL_MINUTES", "5"))
-
-# Relevance threshold
 RELEVANCE_THRESHOLD = int(os.getenv("RELEVANCE_THRESHOLD", "7"))
 
-# Source channels to monitor
 SOURCE_CHANNELS = [
     "ai_newz",
     "gonzo_ML",
@@ -35,7 +30,6 @@ SOURCE_CHANNELS = [
     "datascienceandai",
 ]
 
-# Keywords for filtering
 KEYWORDS = [
     "ai", "ml", "artificial intelligence", "machine learning",
     "deep learning", "llm", "gpt", "claude", "gemini",
